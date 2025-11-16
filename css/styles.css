@@ -25,8 +25,8 @@
 :root {
     --color-dark: #000000;
     --color-light: #FFFFFF;
-    --color-dark-grey: #404040;
-    --color-light-grey: #C4C4C4;
+    --color-dark-gray: #404040;
+    --color-light-gray: #C4C4C4;
 
     --border-radius: 30px;
     --border: 1px solid var(--color-light);
@@ -46,9 +46,25 @@ body {
     font-weight: 300;
     font-size: 16px;
     line-height: 1.75;
-    color: var(--color-light-grey);
+    color: var(--color-light-gray);
 
     background-color: var(--color-dark);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: var(--color-light)
+}
+
+a:hover {
+    color: var(--color-light-gray);
 }
 
 .container {
