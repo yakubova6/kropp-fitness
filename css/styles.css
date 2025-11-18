@@ -36,10 +36,13 @@
     --font-family-accent: 'Yantramanav', sans-serif;
 
     --input-height: 54px;
+
     --container-width: 1300px;
     --container-padding-x: 15px;
 
     --transition-duration: 0.2s;
+
+    --header-height: 90px;
 }
 
 body {
@@ -116,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     align-items: center;
     column-gap: 20px;
+    min-height: var(--header-height);
     padding-inline: 32px;
     background-color: var(--color-dark-alternate);
 }
@@ -134,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex;
     align-items: center;
     column-gap: 7px;
-    height: 90px;
+    height: var(--header-height);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
@@ -185,7 +189,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    min-height: 985px;
+    min-height: calc(100vh - var(--header-height));
     padding: 36px 70px;
     color: var(--color-light);
     background-color: var(--color-dark-alternate);
@@ -198,21 +202,21 @@ h1, h2, h3, h4, h5, h6 {
 .banner-info {
     display: flex;
     align-items: end;
-    font-size: 30px;
+    font-size: clamp(16px, 1.56vw, 30px);
     line-height: 1.27;
     font-weight: 700;
 }
 
 .banner-info::before {
     content: "";
-    width: 194px;
+    width: clamp(60px, 10.1vw, 194px);
     aspect-ratio: 1;
     margin-right: 30px;
     background: url('../assets/icons/bold-arrow-down-right.svg') center/contain no-repeat;
 }
 
 .banner-title {
-    font-size: 360px;
+    font-size: min(18.75vw, 360px);
     line-height: 1;
     font-weight: 700;
 }
@@ -257,6 +261,10 @@ h1, h2, h3, h4, h5, h6 {
         flex-wrap: wrap;
         padding-top: 20px;
         row-gap: 10px;
+    }
+
+    .header,
+    .banner {
         padding-inline: 15px;
     }
 
@@ -267,6 +275,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .header-menu-link {
         height: 50px;
+    }
+
+    .banner {
+        row-gap: 10px;
     }
 }
 
@@ -289,5 +301,13 @@ h1, h2, h3, h4, h5, h6 {
 
     .header-actions {
         column-gap: 15px;
+    }
+
+    .banner-info {
+        margin-bottom: 5px;
+    }
+
+    .banner-info::before {
+        margin-right: 10px;
     }
 }
