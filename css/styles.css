@@ -100,12 +100,12 @@ p:not([class]):not(:last-child) {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-transform: uppercase;
+    color: var(--color-light)
 }
 
 .title-medium {
     font-size: clamp(20px, 2.08vw, 40px);
     line-height: 1.3;
-    color: var(--color-light);
 }
 
 .backdrop-title {
@@ -359,10 +359,44 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 37px;
 }
 
+.training-types {
+    position: relative;
+    max-width: 1920px;
+    margin-inline: auto;
+    padding: 70px 10px 120px;
+    background-color: var(--color-dark);
+}
+
+.training-type-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 60px;
+}
+
+.training-type-item {
+    --trainingTypesItemBgIconSize: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    padding-top: var(--trainingTypesItemBgIconSize);
+    background: url('../assets/icons/transparent-arrow-bottom-left.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat ;
+}
+
+.training-types-item-title {
+    font-size: 16px;
+}
 
 @media (max-width: 1919px) {
     .motivation-card-image {
         margin-block: -20px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .training-type-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -447,5 +481,20 @@ h1, h2, h3, h4, h5, h6 {
 
     .motivation-card-description:not(:last-child) {
         margin-bottom: 20px;
+    }
+
+    .training-type-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .training-type-item {
+        --trainingTypesItemBgIconSize: 50px;
+
+        row-gap: 10px;
+    }
+
+    .training-type-image {
+        max-width: 120px;
     }
 }
