@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .backdrop-title.centered::after {
-    top: -0.55em;
+    top: -0.4em;
     left: 50%;
     translate: -50% 0;
 }
@@ -422,6 +422,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .training-types-item-title {
     font-size: 16px;
+}
+
+.join-us {
+    background-color: var(--color-dark-alternate);
 }
 
 .join-us-video-wrapper {
