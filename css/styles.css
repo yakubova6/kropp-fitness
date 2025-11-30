@@ -67,6 +67,12 @@ a {
     color: var(--color-light)
 }
 
+button {
+    -webkit-appearance: none;
+    appearance: none;
+    color: var(--color-dark);
+}
+
 a:hover {
     color: var(--color-light-gray);
 }
