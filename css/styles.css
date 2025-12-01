@@ -236,7 +236,6 @@ select.input:invalid {
     color: var(--color-light-gray);
 }
 
-/* Для выпадающего списка - переопределяем цвет вариантов */
 select.input option:not([disabled]) {
     color: var(--color-dark);
 }
@@ -263,6 +262,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+/* ==== HEADER SECTION ==== */
 .header {
     display: flex;
     justify-content: space-between;
@@ -334,6 +334,7 @@ input[type=number] {
     box-shadow: 16px 0 0 currentColor;
 }
 
+/* ==== BANNER SECTION ==== */
 .banner {
     display: flex;
     flex-direction: column;
@@ -405,6 +406,7 @@ input[type=number] {
     border-color: var(--color-light-gray);
 }
 
+/* ==== MOTIVATION SECTION ==== */
 .motivation-item:nth-child(even) {
     background-color: var(--color-dark-alternate);
 }
@@ -440,6 +442,7 @@ input[type=number] {
     margin-bottom: 37px;
 }
 
+/* ==== TRAINING TYPES SECTION ==== */
 .training-types {
     position: relative;
     padding: 70px 10px 120px;
@@ -467,6 +470,7 @@ input[type=number] {
     font-size: 16px;
 }
 
+/* ==== JOIN US SECTION ==== */
 .join-us {
     background-color: var(--color-dark-alternate);
 }
@@ -570,6 +574,7 @@ input[type=number] {
     max-width: 400px;
 }
 
+/* ==== LOCATION SECTION ==== */
 .location {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -634,6 +639,7 @@ input[type=number] {
     scroll-snap-align: start;
 }
 
+/* ==== CALCULATE SECTION ==== */
 .calculate {
     padding-block: 146px;
     background-color: var(--color-dark-alternate);
@@ -753,6 +759,7 @@ input[type=number] {
     color: var(--color-light);
 }
 
+/* ==== FOOTER SECTION ==== */
 .footer {
     --footerLogoWidth: 20.3%;
 }
@@ -860,6 +867,7 @@ input[type=number] {
     font-size: 14px;
 }
 
+/* ==== MEDIA QUERIS ==== */
 @media (max-width: 1919px) {
     .motivation-card-image {
         margin-block: -20px;
@@ -1100,5 +1108,15 @@ input[type=number] {
 
     .footer-subscribe:not(:last-child) {
         margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 475px) {
+    .family-header {
+        padding-inline: 35px;
+    }
+
+    .calculate-inner {
+        padding-inline: 40px;
     }
 }
