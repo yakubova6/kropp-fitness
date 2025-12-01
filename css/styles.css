@@ -1112,10 +1112,7 @@ input[type=number] {
 }
 
 @media (max-width: 475px) {
-    .family-header {
-        padding-inline: 40px;
-    }
-
+    .family-header,
     .calculate-inner {
         padding-inline: 40px;
     }
